@@ -5,9 +5,9 @@ pipeline {
 		{
 			steps{
 				sh '''
+					
 					echo "install git"
-					sudo su
-         yum install git -y
+					sudo yum install git -y
 				'''
 			}	
 		}
