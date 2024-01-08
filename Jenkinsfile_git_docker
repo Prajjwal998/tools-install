@@ -7,7 +7,7 @@ pipeline {
 				sh '''
 					
 					echo "install git"
-					sudo yum install git -y
+					yum install git -y
 				'''
 			}	
 		}
@@ -15,7 +15,7 @@ pipeline {
 		{
 			steps{
 				sh '''
-        sudo yum install docker -y
+        			yum install docker -y
 				'''
 			}
 		}
