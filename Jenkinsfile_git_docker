@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install git') 
+		{
+			steps{
+				sh '''
+					echo "install git"
+					sudo su
+         yum install git -y
+				'''
+			}	
+		}
+		stage('Install docker')
+		{
+			steps{
+				sh '''
+        sudo yum install docker -y
+				'''
+			}
+		}
+	stage('start docker service')
+	{
+		steps{
+			sh '''
+     service docker start
+     service docker status
+			'''
+}
+	}
+
+
+	}
+}
